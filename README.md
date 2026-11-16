@@ -1,0 +1,46 @@
+# BuildSignals
+
+BuildSignals is an early-stage FastAPI project for blog posts about AI,
+agentic AI, software testing, and other technology topics.
+
+## Current functionality
+
+- `GET /` returns a simple HTML welcome message.
+- `GET /api/posts` returns two sample posts stored in memory.
+- Interactive API documentation is available at `/docs`.
+
+The sample posts are not persisted. User accounts and blog management are not
+yet implemented.
+
+## Planned functionality
+
+- Register and log in to a user account.
+- Create, edit, and delete blog posts.
+
+## Getting started
+
+Requirements: Python 3.12 or newer and [uv](https://docs.astral.sh/uv/).
+
+Install dependencies from the lockfile:
+
+```powershell
+uv sync --locked
+```
+
+Start the development server from the project root:
+
+```powershell
+uv run fastapi dev main.py
+```
+
+Visit `http://127.0.0.1:8000/docs` to explore the API, or
+`http://127.0.0.1:8000/api/posts` to see the sample posts.
+
+## Project layout
+
+- `main.py` — FastAPI application and sample posts.
+- `src/buidsignals/` — Python package scaffold.
+- `pyproject.toml` — project metadata and dependencies.
+- `uv.lock` — locked dependency versions.
+
+This project is under development; its API and structure may change.
