@@ -6,8 +6,13 @@ agentic AI, software testing, and other technology topics.
 ## Current functionality
 
 - `GET /` and `GET /posts` render an HTML page listing the sample blog posts.
-- The post page uses a shared Jinja2 layout and displays each post's title,
-  author, content, and date posted.
+- The post page uses a shared, responsive Jinja2 layout with navigation,
+  a sidebar, and a footer. Each post is displayed as a card with its profile
+  image, title, author, content, and date posted.
+- The layout includes a light, dark, and automatic theme selector that saves
+  the selected mode in the browser.
+- Static assets, including the stylesheet, profile image, icons, and web app
+  manifest, are served from `/static`.
 - `GET /api/posts` returns two sample posts stored in memory.
 - Interactive API documentation is available at `/docs`.
 
@@ -42,6 +47,7 @@ Visit `http://127.0.0.1:8000/docs` to explore the API, or
 
 - `main.py` — FastAPI application and sample posts.
 - `templates/` — Jinja2 templates for the shared page layout and post listing.
+- `static/` — Stylesheets, profile images, icons, and web app manifest.
 - `src/buidsignals/` — Python package scaffold.
 - `pyproject.toml` — project metadata and dependencies.
 - `uv.lock` — locked dependency versions.
