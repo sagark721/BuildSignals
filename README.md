@@ -5,12 +5,14 @@ agentic AI, software testing, and other technology topics.
 
 ## Current functionality
 
-- `GET /` returns a simple HTML welcome message.
+- `GET /` and `GET /posts` render an HTML page listing the sample blog posts.
+- The post page uses a shared Jinja2 layout and displays each post's title,
+  author, content, and date posted.
 - `GET /api/posts` returns two sample posts stored in memory.
 - Interactive API documentation is available at `/docs`.
 
-The sample posts are not persisted. User accounts and blog management are not
-yet implemented.
+The sample posts are stored in memory and are not persisted. User accounts and
+blog management are not yet implemented.
 
 ## Planned functionality
 
@@ -39,6 +41,7 @@ Visit `http://127.0.0.1:8000/docs` to explore the API, or
 ## Project layout
 
 - `main.py` — FastAPI application and sample posts.
+- `templates/` — Jinja2 templates for the shared page layout and post listing.
 - `src/buidsignals/` — Python package scaffold.
 - `pyproject.toml` — project metadata and dependencies.
 - `uv.lock` — locked dependency versions.
