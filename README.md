@@ -14,6 +14,10 @@ agentic AI, software testing, and other technology topics.
 - Static assets, including the stylesheet, profile image, icons, and web app
   manifest, are served from `/static`.
 - `GET /api/posts` returns two sample posts stored in memory.
+- `GET /posts/{post_id}` renders an individual post page, linked from the post
+  titles on the home page. Unknown post IDs return a 404 response.
+- `GET /api/post/{post_id}` returns an individual post as JSON. Unknown post
+  IDs return a 404 response.
 - Interactive API documentation is available at `/docs`.
 
 The sample posts are stored in memory and are not persisted. User accounts and
