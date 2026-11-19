@@ -18,6 +18,10 @@ agentic AI, software testing, and other technology topics.
   titles on the home page. Unknown post IDs return a 404 response.
 - `GET /api/post/{post_id}` returns an individual post as JSON. Unknown post
   IDs return a 404 response.
+- Error responses for browser pages use a shared HTML error template and keep
+  the original HTTP status code. API errors return JSON with a `detail` field;
+  API validation errors use status 422 and include validation details, while
+  browser validation errors show a friendly message.
 - Interactive API documentation is available at `/docs`.
 
 The sample posts are stored in memory and are not persisted. User accounts and
@@ -50,7 +54,8 @@ Visit `http://127.0.0.1:8000/docs` to explore the API, or
 ## Project layout
 
 - `main.py` — FastAPI application and sample posts.
-- `templates/` — Jinja2 templates for the shared page layout and post listing.
+- `templates/` — Jinja2 templates for the shared page layout, post listing,
+  individual posts, and error pages.
 - `static/` — Stylesheets, profile images, icons, and web app manifest.
 - `src/buidsignals/` — Python package scaffold.
 - `pyproject.toml` — project metadata and dependencies.
